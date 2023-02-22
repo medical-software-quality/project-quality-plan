@@ -43,16 +43,16 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 ## Requirements
 
-* A requirement is either relevant or it is not described.
+* A requirement is either critical or it is not described.
 
-* A requirement is automatically relevant if it has a direct impact to:
+* A requirement is automatically critical if it has a direct impact to:
     * Product quality
     * Patient safety
     * Data integrity
 
     Impact to any of these areas is assessed by a qualified user and risk manager.
     If the requirement does not impact the above, a risk manager decides whether it is
-    relevant or not.
+    critical or not.
 
 * There is no distinction between functional and non-functional requirements.
 
