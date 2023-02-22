@@ -35,10 +35,10 @@ By adering to this SOP:
 * PC6: The repository follows the documentation as code specification[^6].
 * PC7: The repository follows a software development SOP (SD SOP) linked from the PQP
   including but not limited to how:
-    * software is developed
-    * tests are developed
-    * CI/CD is developed
-    * documentation is developed
+  * software is developed
+  * tests are developed
+  * CI/CD is developed
+  * documentation is developed
 * PC8: The repository contains a CI/CD capable of executing step 2 and 4 below.
 
 ### Steps
@@ -83,8 +83,7 @@ Confirm that:
 
 ## Notes
 
-* The PR review and approval constitutes the design review of the change. "Other roles" in the review
-  are primarily used to establish confidence that the specification meet (user) requirements.
+* The PR review and approval constitutes the design review of the change.
 
 * The PR identifier uniquely identifies a release. The PR is also a change record.
 
