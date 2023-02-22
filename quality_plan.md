@@ -49,6 +49,7 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
     * Product quality
     * Patient safety
     * Data integrity
+
     Impact to any of these areas is assessed by a qualified user and risk manager.
     If the requirement does not impact the above, a risk manager decides whether it is
     relevant or not.
@@ -77,6 +78,7 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
     * Product quality
     * Patient safety
     * Data integrity
+
     This assessment is conducted together by a qualified user and a risk manager.
     If the risk is unrelated to the above, a risk manager decides whether it is
     relevant or not with support from a qualified user.
@@ -109,6 +111,9 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 * The design specification
   is written, reviewed and approved through the software development SOP[^3].
+
+* The design specification _may_ be owned by some software developers. When owned, changes
+  to risks must be approved by the owners.
 
 ## Configuration management
 
@@ -186,16 +191,16 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 ### Operations
 
-* TODO: The operations manual
+* The operator manual
   is specified and stored according to the DaC specification[^1].
 
-* TODO: The operations manual
+* The operator manual
   has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
 
-* TODO: The operations manual
+* The operator manual
   is written, reviewed and approved through the software development SOP[^3].
 
-* Monitoring configuration is described in the operations manual.
+* Monitoring is described in the operator manual.
 
 * Maintenance changes are no different than any other change and follow the release SOP[^2].
 
