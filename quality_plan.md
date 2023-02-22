@@ -8,6 +8,20 @@
   of other software
 * DaC - Documentation as code[^1] 
 
+## Scope
+
+### In scope
+
+This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/publications/guidance-documents/gamp-5-guide-2nd-edition) within a modern DevOps context using
+* Agile
+* Git version control system
+* continuous integration and continuous deployment (CI/CD)
+* A managed git system supporting roles and requests such as github or gitlab
+
+### Out of scope
+
+* This PQP is (currently) _not_ intended for software as a medical device nor software in medical devices.
+
 ## Roles and responsibilities
 
 * user
@@ -27,19 +41,26 @@
   * responsible for writing tests
   * responsible for writing documentation
 
-## Scope
+## Training
 
-### In scope
+The roles have the following mandatory (read and understood) training:
 
-This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/publications/guidance-documents/gamp-5-guide-2nd-edition) within a modern DevOps context using
-* Agile
-* Git version control system
-* continuous integration and continuous deployment (CI/CD)
-* A managed git system supporting roles and requests such as github or gitlab
+* user
+  * user manual
+* qualified user
+  * user manual
+* risk manager
+  * this plan
+  * DaC specification[^1]
+  * release SOP[^2]
+* software developer
+  * this plan
+  * DaC specification[^1]
+  * release SOP[^2]
+  * Software development SOP[^3]
 
-### Out of scope
-
-* This PQP is (currently) _not_ intended for software as a medical device nor software in medical devices.
+* A change to any document results in a mandatory training for the persons in the role
+  to read and understood the changes to the document.
 
 ## Requirements
 
@@ -131,7 +152,8 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 * All software developers are trained in the software development SOP.
 
-* Changes to the software development SOP[^3] are communicated to the software developers.
+* Changes to the software development SOP[^3] are communicated to
+  the software developers as part of the change.
 
 ## Validation
 
@@ -219,6 +241,6 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 [^1]: [Quality documentation as code specification](https://github.com/medical-software-quality/documentation-as-code/tree/main/documentation/features)
 
-[^2]: [Quality release SOP](https://github.com/medical-software-quality/release-sop/blob/main/sop.md)
+[^2]: [release SOP](./release_sop.md)
 
 [^3]: [Software development SOP](https://github.com/jorgecarleitao/quality-software-development)
