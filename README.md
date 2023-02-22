@@ -19,14 +19,15 @@ the software can be declared fit for use in GxP
 
 # How to use
 
-On your project's repository (e.g. on Github),
+On your applications's repository (e.g. Gitlab, Github),
 
-1. Apply [this configuration](./configuration.md) to the repository
-2. Add [this](https://github.com/jorgecarleitao/quality) CI check to the repository
+1. Apply [this configuration](https://github.com/medical-software-quality/release-sop/blob/main/configuration.md) to the repository
+2. Add [this](https://github.com/medical-software-quality/documentation-as-code) CI check to the repository
 3. Link a specific commit hash of this repository's [quality plan](./quality_plan.md) to your README.
-4. Have a training session with your team on this plan and corresponding SOPs.
-5. Establish a process for new members have a training session this plan and corresponding SOPs.
-6. Establish a process for yearly refreshers to existing members.
+4. Create a PR and assign it to the person responsible for the application.
+5. Have a training session with your team on this plan and corresponding SOPs.
+6. Establish a process for new members to have a training session with this plan and corresponding SOPs.
+7. Establish a process for yearly refreshers to existing members.
 
 # Contribution
 
