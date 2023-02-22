@@ -29,6 +29,10 @@ On your applications's repository (e.g. Gitlab, Github),
 6. Establish a process for new members to have a training session with this plan and corresponding SOPs.
 7. Establish a process for yearly refreshers to existing members.
 
+# License
+
+This repository and all files on it are licensed according to the [LICENSE](LICENSE.md).
+
 # Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the license, shall be licensed as above, without any additional terms or conditions.
