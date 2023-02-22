@@ -212,8 +212,8 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 ## References
 
-[^1]: [Quality documentation as code specification](https://github.com/jorgecarleitao/quality/tree/main/documentation/features)
+[^1]: [Quality documentation as code specification](https://github.com/medical-software-quality/documentation-as-code/tree/main/documentation/features)
 
-[^2]: [Quality release SOP](https://github.com/jorgecarleitao/quality-release)
+[^2]: [Quality release SOP](https://github.com/medical-software-quality/release-sop/blob/main/sop.md)
 
 [^3]: [Software development SOP](https://github.com/jorgecarleitao/quality-software-development)
