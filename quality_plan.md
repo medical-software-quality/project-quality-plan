@@ -1,11 +1,31 @@
 # Project quality plan
 
-## Notation
+## Abreviations
 
 * PQP - Project quality plan, this document
 * SOP - standard operating procedure
-* CI/CD - software that executes a set of instructions related to verification and deployment of software
+* CI/CD - software that executes a set of instructions related to verification and deployment
+  of other software
 * DaC - Documentation as code[^1] 
+
+## Roles and responsibilities
+
+* user
+  * uses the application
+  * reports defects to the projects' ticket
+  * supports the team in establishing that defects are correctly addressed
+* qualified user
+  * has all the responsibilities that a user has
+  * supports risk managers in performing risk assessments
+  * supports developers in describing requirements
+  * may own specific requirements
+* risk manager
+  * responsible for assessing requirements' impact to risk controls
+  * responsible for assessing risks' impact to risk controls
+* software developer
+  * responsible for developing software
+  * responsible for writing tests
+  * responsible for writing documentation
 
 ## Scope
 
@@ -23,14 +43,14 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 ## Requirements
 
-* A requirement is either relevant or it may be implemented but it is not described.
+* A requirement is either relevant or it is not described.
 
-* A requirement is automatically relevant if it is has a direct impact to:
+* A requirement is automatically relevant if it has a direct impact to:
     * Product quality
     * Patient safety
     * Data integrity
-    Impact to any of these areas is established by agreement between a user and the product owner.
-    If the requirement does not impact the above, the product owner decides whether it is
+    Impact to any of these areas is assessed by a qualified user and risk manager.
+    If the requirement does not impact the above, a risk manager decides whether it is
     relevant or not.
 
 * There is no distinction between functional and non-functional requirements.
@@ -46,20 +66,20 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 * The functional specification
   is written, reviewed and approved through the software development SOP[^3].
 
-* Requirements _may_ be owned by specific users. When owned, changes
+* Requirements _may_ be owned by specific qualified users. When owned, changes
   to requirements must be approved by the owners.
 
 ## Risks
 
-* A risk is either relevant or it is not described (but may still be mitigated).
+* A risk is either relevant or it is not described.
 
 * A risk is relevant when it relates to:
     * Product quality
     * Patient safety
     * Data integrity
-    This assessment is conducted by a user, risk manager and the product owner.
-    If the risk is unrelated to the above, the product owner decides whether it is
-    relevant or not.
+    This assessment is conducted together by a qualified user and a risk manager.
+    If the risk is unrelated to the above, a risk manager decides whether it is
+    relevant or not with support from a qualified user.
 
 * Risks are described, identified and traced in a risk assessment.
 
@@ -72,7 +92,7 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 * The risk assessment
   is written, reviewed and approved through the software development SOP[^3].
 
-* The risk assessment _may_ be owned by specific people. When owned, changes
+* The risk assessment _may_ be owned by some risk managers. When owned, changes
   to risks must be approved by the owners.
 
 * A risk is mitigated by either a design choice, tests or operational monitoring.
@@ -92,6 +112,8 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 ## Configuration management
 
+* All configuration items are stored and versioned in the projects' git repository.
+
 * Changes to the controlled production environment are described by the release SOP[^2].
 
 * Access to the controlled production environment is restricted to privileged users; the system
@@ -102,17 +124,15 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 * Software development follows the software development SOP[^3].
 
-* All software developers in this project are trained in the software development SOP.
+* All software developers are trained in the software development SOP.
 
 * Changes to the software development SOP[^3] are communicated to the software developers.
-
-* Hiring of new developers includes a technical assessment based on the software development SOP.
 
 ## Validation
 
 * All validation activities are performed throught "tests".
 
-* A test is either relevant or, although it may be executed as part of the validation, it is not described.
+* A test is either relevant or it is not described.
 
 * A test is relevant when:
     * it tests a requirement described in the function specification
@@ -162,15 +182,6 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
   has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
 
 * The user manual
-  is written, reviewed and approved through the software development SOP[^3].
-
-* TODO: The user training instruction
-  is specified and stored according to the DaC specification[^1].
-
-* TODO: The user training instruction
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
-
-* TODO: The user training instruction
   is written, reviewed and approved through the software development SOP[^3].
 
 ### Operations

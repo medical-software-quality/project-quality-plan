@@ -10,7 +10,7 @@ git tags on this repository.
 
 The gist of this PQP from a modern CI/CD:
 * all configuration (except secrets) is described through code in git (configuration as code)
-* all documentation is in git (documentation as code)
+* all documentation is written in markdown and Gherkin in git (documentation as code)
 * `main` points to the current configuration in production except when deployment fails
 * changes to `main` can only be done through pull requests
 
