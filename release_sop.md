@@ -1,14 +1,5 @@
 # Release standard operating procedure
 
-## Background
-
-Some processes in the pharma have regulatory requirements over how they are implemented and conducted
-(such as GLP and GCP, here denoted GxP).
-Software supporting such processes must follow regulations regarding how it is declared
-fit for use for such GxP processes. Such regulations include those by EMA[^1][^2] and FDA[^3][^4],
-and are broadly covered by GAMP 5[^5].
-This SOP is a concretization of the principles of GAMP 5 in a modern DevOps context.
-
 ## Scope
 
 ### In scope
@@ -48,6 +39,7 @@ By adering to this SOP:
     * tests are developed
     * CI/CD is developed
     * documentation is developed
+* PC8: The repository contains a CI/CD capable of executing step 2 and 4 below.
 
 ### Steps
 
@@ -57,20 +49,17 @@ By adering to this SOP:
     * Static code analysis are executed and results presented in PR
     * Unit-tests are executed and results presented in PR
     * Documentation tests are executed and results presented in PR
-    * build and publication (release candidate-versioned) of binaries or artifacts are executed
-    * Installation of publication is executed
+    * build and publish (release candidate-versioned) of binaries or artifacts are executed
+    * Installation of published binaries or artifacts is executed and results are presented in PR
     * Installation verification is executed and results are presented in PR
     * Integration tests are executed and results are presented in PR
     * Any other optional manual tests are executed and results presented in PR (e.g. as a comment)
     * Any post-deployment tests are executed and results presented in PR
-3. Review and approval
-    * software developer 2 reviews the PR to verify the that "checklist for PRs" was correctly followed and approves
-      if that is fulfilled
-    * other roles (e.g. release manager) _may_ be required to review the PR to verify that
-      other checklists are applied.
-4. CI/CD builds and publishes (versioned) binaries or artifacts
-5. CI/CD deploys to `prd`
-    * Installation to `prd` is executed
+3. software developer 2 reviews the PR to verify the that "checklist for PRs"
+   was correctly followed and approves if that is fulfilled.
+4. CI/CD deploys to `prd`
+    * build and publish (versioned) binaries or artifacts
+    * Installation to `prd` is executed and results are presented in PR
     * Any post-deployment tests are executed and results presented in PR (e.g. as a comment)
 
 #### Checklist for PRs
