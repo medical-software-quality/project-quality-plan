@@ -1,5 +1,14 @@
 # Project quality plan
 
+## Background
+
+Some processes in the pharma have regulatory requirements over how they are implemented and conducted
+(such as GLP and GCP, here denoted GxP).
+Software supporting such processes must follow regulations regarding how it is declared
+fit for use for such GxP processes. Such regulations include those by EMA and FDA
+and are broadly covered by [GAMP 5](https://ispe.org/publications/guidance-documents/gamp-5-guide-2nd-edition)
+This PQP is a concretization of the principles of GAMP 5 in a modern DevOps context.
+
 ## Abreviations
 
 * PQP - Project quality plan, this document

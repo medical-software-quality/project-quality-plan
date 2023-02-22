@@ -14,7 +14,7 @@ This SOP is a concretization of the principles of GAMP 5 in a modern DevOps cont
 ### In scope
 
 This SOP allows configuration management and release management of medical software guided by
-GAMP 5 within a modern DevOps context using
+GAMP 5[^5] within a modern DevOps context using
 * Agile
 * Git version control system
 * continuous integration and continuous deployment (CI/CD)
@@ -28,7 +28,7 @@ By adering to this SOP:
 ### Out of scope
 
 * This SOP is _not_ intended for development of software _libraries_.
-* This SOP is (currently) _not_ intended for use in development of software as a medical device,
+* This SOP is _not_ intended for use in development of software as a medical device,
   nor software in medical devices.
 
 ## Process of changing a validated state
@@ -37,12 +37,12 @@ By adering to this SOP:
 
 * PC1: Changes to `prd` _must only_ be done through this SOP via a trigger from a push to `main`.
 * PC2: Commits to `main` must only be done through a request (PR).
-* PC3: All PRs _must_ be reviewed and approved by an SME; this SME cannot be the creator of the PR.
+* PC3: All PRs _must_ be reviewed and approved by an software developer; this software developer cannot be the creator of the PR.
 * PC4: The review and approval _must_ be done against the exact code that would become the
   new `main` on approval of the PR.
 * PC5: In `main`, the git commit message _must_ trace to the corresponding PR.
 * PC6: The repository follows the documentation as code specification[^6].
-* PC7: The repository follows a software development SOP (SD SOP) linked from its `README.md`
+* PC7: The repository follows a software development SOP (SD SOP) linked from the PQP
   including but not limited to how:
     * software is developed
     * tests are developed
@@ -51,7 +51,7 @@ By adering to this SOP:
 
 ### Steps
 
-1. SME 1 creates a PR following the "checklist for PRs" below with changes to the software
+1. software developer 1 creates a PR following the "checklist for PRs" below with changes to the software
    following the project's SD SOP (described in PC7 above).
 2. CI/CD verifies the software in (non-production) environments
     * Static code analysis are executed and results presented in PR
@@ -64,7 +64,7 @@ By adering to this SOP:
     * Any other optional manual tests are executed and results presented in PR (e.g. as a comment)
     * Any post-deployment tests are executed and results presented in PR
 3. Review and approval
-    * SME 2 reviews the PR to verify the that "checklist for PRs" was correctly followed and approves
+    * software developer 2 reviews the PR to verify the that "checklist for PRs" was correctly followed and approves
       if that is fulfilled
     * other roles (e.g. release manager) _may_ be required to review the PR to verify that
       other checklists are applied.
