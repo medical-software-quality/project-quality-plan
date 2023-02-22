@@ -34,27 +34,27 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 ## Roles and responsibilities
 
 * QA manager
-  * responsible for ensuring that this plan is followed
+  * ensures that this plan is followed
+  * ensures that roles are trained according to the training plan
 * risk manager
-  * responsible for assessing requirements' impact to risk controls
-  * responsible for assessing risks' impact to risk controls
+  * assesses requirements' impact to risk controls
+  * assesses risks' impact to risk controls
 * software developer
-  * responsible for developing software
-  * responsible for writing tests
-  * responsible for writing documentation
+  * develops software
+  * writes tests
+  * writes documentation
 * user
-  * uses the application
-  * reports defects to the projects' ticket
+  * reports defects to the projects' ticket as part of its use
   * supports the team in establishing that defects are correctly addressed
 * qualified user
-  * has all the responsibilities that a user has
+  * reports defects to the projects' ticket as part of its use
+  * supports the team in establishing that defects are correctly addressed
   * supports risk managers in performing risk assessments
-  * supports developers in describing requirements
-  * may own specific requirements
+  * supports software developers in describing requirements
 
-## Training
+## Training plan
 
-The roles have the following mandatory (read and understood) training:
+The following is mandatory (read and understood) training:
 
 * QA manager
   * this plan
@@ -69,13 +69,15 @@ The roles have the following mandatory (read and understood) training:
   * DaC specification[^1]
   * release SOP[^2]
   * Software development SOP[^3]
+* administrator
+  * this plan[^1]
 * user
   * user manual
 * qualified user
   * user manual
 
 * A change to any document results in a mandatory training for the persons in the role
-  to read and understood the changes to the document.
+  to read and understand the changes to the document.
 
 ## Requirements
 
@@ -157,18 +159,13 @@ The roles have the following mandatory (read and understood) training:
 
 * Changes to the controlled production environment are described by the release SOP[^2].
 
-* Access to the controlled production environment is restricted to privileged users; the system
+* Access to the controlled production environment is restricted to administrators; the system
   account used to deploy to production can only be used from the branch `main`.
-  Change to these policies can only be done by a (admin) privileged user.
+  Change to these policies can only be done by a administrator.
 
 ## Software development
 
 * Software development follows the software development SOP[^3].
-
-* All software developers are trained in the software development SOP.
-
-* Changes to the software development SOP[^3] are communicated to
-  the software developers as part of the change.
 
 ## Validation
 
