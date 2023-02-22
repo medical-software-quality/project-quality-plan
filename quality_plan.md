@@ -29,10 +29,19 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 ### Out of scope
 
-* This PQP is (currently) _not_ intended for software as a medical device nor software in medical devices.
+* This PQP is _not_ intended for software as a medical device nor software in medical devices.
 
 ## Roles and responsibilities
 
+* QA manager
+  * responsible for ensuring that this plan is followed
+* risk manager
+  * responsible for assessing requirements' impact to risk controls
+  * responsible for assessing risks' impact to risk controls
+* software developer
+  * responsible for developing software
+  * responsible for writing tests
+  * responsible for writing documentation
 * user
   * uses the application
   * reports defects to the projects' ticket
@@ -42,22 +51,15 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
   * supports risk managers in performing risk assessments
   * supports developers in describing requirements
   * may own specific requirements
-* risk manager
-  * responsible for assessing requirements' impact to risk controls
-  * responsible for assessing risks' impact to risk controls
-* software developer
-  * responsible for developing software
-  * responsible for writing tests
-  * responsible for writing documentation
 
 ## Training
 
 The roles have the following mandatory (read and understood) training:
 
-* user
-  * user manual
-* qualified user
-  * user manual
+* QA manager
+  * this plan
+  * DaC specification[^1]
+  * release SOP[^2]
 * risk manager
   * this plan
   * DaC specification[^1]
@@ -67,6 +69,10 @@ The roles have the following mandatory (read and understood) training:
   * DaC specification[^1]
   * release SOP[^2]
   * Software development SOP[^3]
+* user
+  * user manual
+* qualified user
+  * user manual
 
 * A change to any document results in a mandatory training for the persons in the role
   to read and understood the changes to the document.
