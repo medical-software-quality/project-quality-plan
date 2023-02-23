@@ -83,7 +83,7 @@ The following is mandatory (read and understood) training:
 
 * A requirement is either critical or it is not described.
 
-* A requirement is automatically critical if it has a direct impact to:
+* A requirement is critical if it has a direct impact to:
     * Product quality
     * Patient safety
     * Data integrity
