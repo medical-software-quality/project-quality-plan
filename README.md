@@ -10,14 +10,14 @@ You can find the plan [here](./quality_plan.md). Its version is
 identified by [semver](https://semver.org/) git tags on this repository.
 
 The gist of this PQP from a modern CI/CD:
-* all configuration (except secrets) is described through code in git (configuration as code)
+* all configuration items (except secrets) are described through code in git (configuration as code)
 * all documentation is written in [markdown](https://en.wikipedia.org/wiki/Markdown)
   and [Gherkin](https://cucumber.io/docs/gherkin/) in git (documentation as code)
 * `main` points to the current configuration in production except when deployment fails
 * changes to `main` can only be done through pull requests
 
 By adopting and following this PQP, its related SOPs and the associated documentation specification,
-the software can be declared fit for use in GxP
+the software can be declared fit for use in GxP.
 
 # How to use
 

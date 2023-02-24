@@ -1,20 +1,22 @@
 # Release standard operating procedure
 
+This SOP allows configuration management and release management of medical software guided by
+[GAMP 5](https://ispe.org/publications/guidance-documents/gamp-5-guide-2nd-edition)
+within a modern DevOps context using
+* Agile
+* Git version control system
+* continuous integration and continuous deployment (CI/CD)
+* A git management system supporting roles and requests such as github or gitlab
+
+By adering to this SOP:
+* a software asset can be released and declared fit for use according to its verification plan
+* the controlled environment (`prd`) where the asset is declared fit for use remain in control
+
 ## Scope
 
 ### In scope
 
-This SOP allows configuration management and release management of medical software guided by
-GAMP 5[^5] within a modern DevOps context using
-* Agile
-* Git version control system
-* continuous integration and continuous deployment (CI/CD)
-* A managed git system supporting roles and requests such as github or gitlab
-
-By adering to this SOP:
-* an application can be established fit for intended purpose according to this SOP
-* an application can be released and established fit for use according to this SOP
-* any changes to the controlled production environment (`prd`) where the application is used remain in control.
+* This SOP is intended for development and release of medical software to a controlled environment.
 
 ### Out of scope
 
@@ -28,13 +30,12 @@ By adering to this SOP:
 
 * PC1: Changes to `prd` _must only_ be done through this SOP via a trigger from a push to `main`.
 * PC2: Commits to `main` must only be done through a request (PR).
-* PC3: All PRs _must_ be reviewed and approved by an software developer; this software developer cannot be the creator of the PR.
+* PC3: All PRs _must_ be reviewed and approved by an developer; this developer cannot be the creator of the PR.
 * PC4: The review and approval _must_ be done against the exact code that would become the
   new `main` on approval of the PR.
 * PC5: In `main`, the git commit message _must_ trace to the corresponding PR.
-* PC6: The repository follows the documentation as code specification[^6].
-* PC7: The repository follows a software development SOP (SD SOP) linked from the PQP
-  including but not limited to how:
+* PC6: The repository follows the documentation as code specification[^dac].
+* PC7: The development on the repository follows a development SOP including but not limited to how:
   * software is developed
   * tests are developed
   * CI/CD is developed
@@ -43,33 +44,21 @@ By adering to this SOP:
 
 ### Steps
 
-1. software developer 1 creates a PR following the "checklist for PRs" below with changes to the software
-   following the project's SD SOP (described in PC7 above).
-2. CI/CD verifies the software in (non-production) environments
-    * Static code analysis are executed and results presented in PR
-    * Unit-tests are executed and results presented in PR
-    * Documentation tests are executed and results presented in PR
-    * build and publish (release candidate-versioned) of binaries or artifacts are executed
-    * Installation of published binaries or artifacts is executed and results are presented in PR
-    * Installation verification is executed and results are presented in PR
-    * Integration tests are executed and results are presented in PR
-    * Any other optional manual tests are executed and results presented in PR (e.g. as a comment)
-    * Any post-deployment tests are executed and results presented in PR
-3. software developer 2 reviews the PR to verify the that "checklist for PRs"
-   was correctly followed and approves if that is fulfilled.
-4. CI/CD deploys to `prd`
-    * build and publish (versioned) binaries or artifacts
-    * Installation to `prd` is executed and results are presented in PR
-    * Any post-deployment tests are executed and results presented in PR (e.g. as a comment)
+1. developer 1 creates a PR following the "checklist for PRs" below with changes to the software
+   following the repositories development SOP (described in PC7 above).
+2. CI/CD executes all tests in the verification plan and presents results in PR
+3. developer 2 reviews the PR by verifying that the "checklist for PRs"
+   was correctly followed and approves if verification passes.
+4. the CI/CD executes the installation script and any post-deployment tests and presents results in PR
 
 #### Checklist for PRs
 
 Confirm that:
 
-* code was changed according to SD SOP
-* tests were changed according to SD SOP
-* CI/CD was changed according to SD SOP
-* Documentation was changed according to SD SOP
+* code was developed according to SD SOP[^develop]
+* tests were developed according to SD SOP[^develop]
+* CI/CD was developed according to SD SOP[^develop]
+* Documentation was developed according to SD SOP[^develop]
 * the PR contains a descriptive title of the change
 * the PR's description contains:
     * a summary of the change
@@ -91,14 +80,6 @@ Confirm that:
 
 ## References
 
-[^1]: [Guidance on Qualification and Classification of Software in Regulation (EU) 2017/745 – MDR and Regulation (EU) 2017/746 – IVDR](https://health.ec.europa.eu/system/files/2020-09/md_mdcg_2019_11_guidance_qualification_classification_software_en_0.pdf)
+[^dac]: [documentation as code specification](https://github.com/medical-software-quality/documentation-as-code/tree/main/documentation/features)
 
-[^2]: [Draft Guideline on computerised systems and electronic data in clinical trials](https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/draft-guideline-computerised-systems-electronic-data-clinical-trials_en.pdf)
-
-[^3]: [General Principles of Software Validation](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-principles-software-validation)
-
-[^4]: [Draft Computer Software Assurance for Production and Quality System Software](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/computer-software-assurance-production-and-quality-system-software)
-
-[^5]: [GAMP 5 Guide 2nd Edition](https://ispe.org/publications/guidance-documents/gamp-5-guide-2nd-edition)
-
-[^6]: [documentation as code specification](https://github.com/medical-software-quality/documentation-as-code/tree/main/documentation/features)
+[^develop]: [development SOP](./development_sop.md)

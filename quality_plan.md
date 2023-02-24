@@ -2,7 +2,7 @@
 
 ## Background
 
-Some processes in the pharma have regulatory requirements over how they are implemented and conducted
+Some processes have regulatory requirements over how they are implemented and conducted
 (such as GLP and GCP, here denoted GxP).
 Software supporting such processes must follow regulations regarding how it is declared
 fit for use for such GxP processes. Such regulations include those by EMA and FDA
@@ -15,7 +15,7 @@ This PQP is a concretization of the principles of GAMP 5 for software in a moder
 * SOP - standard operating procedure
 * CI/CD - software that executes a set of instructions related to verification and deployment
   of other software
-* DaC - Documentation as code[^1] 
+* DaC - Documentation as code
 
 ## Scope
 
@@ -43,6 +43,7 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
   * develops software
   * writes tests
   * writes documentation
+  * triages defects
 * user
   * reports defects to the projects' ticket as part of its use
   * supports the team in establishing that defects are correctly addressed
@@ -52,25 +53,32 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
   * supports risk managers in performing risk assessments
   * supports software developers in describing requirements
 
+## Documentation management
+
+Documentation is managed according to the documentation management system[^documentation].
+
 ## Training plan
 
 The following is mandatory (read and understood) training:
 
 * QA manager
   * this plan
-  * DaC specification[^1]
-  * release SOP[^2]
+  * DaC specification[^dac]
+  * release SOP[^release]
+  * documentation writing guidance[^release]
 * risk manager
   * this plan
-  * DaC specification[^1]
-  * release SOP[^2]
+  * DaC specification[^dac]
+  * release SOP[^release]
+  * documentation writing guidance[^release]
 * software developer
   * this plan
-  * DaC specification[^1]
-  * release SOP[^2]
-  * Software development SOP[^3]
+  * DaC specification[^dac]
+  * release SOP[^release]
+  * documentation writing guidance[^release]
+  * Software development SOP[^develop]
 * administrator
-  * this plan[^1]
+  * this plan[^dac]
 * user
   * user manual
 * qualified user
@@ -97,13 +105,13 @@ The following is mandatory (read and understood) training:
 * Requirements are described and identified in the functional specification.
 
 * The functional specification
-  is specified and stored according to the DaC specification[^1].
+  is specified and stored according to the DaC specification[^dac].
 
 * The functional specification
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
+  has the same lifecycle as the application and it is versioned and released according to the release SOP[^release].
 
 * The functional specification
-  is written, reviewed and approved through the software development SOP[^3].
+  is written, reviewed and approved through the software development SOP[^develop].
 
 * Requirements _may_ be owned by specific qualified users. When owned, changes
   to requirements must be approved by the owners.
@@ -124,13 +132,13 @@ The following is mandatory (read and understood) training:
 * Risks are described, identified and traced in a risk assessment.
 
 * The risk assessment
-  is specified and stored according to the DaC specification[^1].
+  is specified and stored according to the DaC specification[^dac].
 
 * The risk assessment
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
+  has the same lifecycle as the application and it is versioned and released according to the release SOP[^release].
 
 * The risk assessment
-  is written, reviewed and approved through the software development SOP[^3].
+  is written, reviewed and approved through the software development SOP[^develop].
 
 * The risk assessment _may_ be owned by some risk managers. When owned, changes
   to risks must be approved by the owners.
@@ -142,13 +150,13 @@ The following is mandatory (read and understood) training:
 * Design topics are described, identified and traced in a design specification.
 
 * The design specification
-  is specified and stored according to the DaC specification[^1].
+  is specified and stored according to the DaC specification[^dac].
 
 * The design specification
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
+  has the same lifecycle as the application and it is versioned and released according to the release SOP[^release].
 
 * The design specification
-  is written, reviewed and approved through the software development SOP[^3].
+  is written, reviewed and approved through the software development SOP[^develop].
 
 * The design specification _may_ be owned by some software developers. When owned, changes
   to risks must be approved by the owners.
@@ -157,15 +165,19 @@ The following is mandatory (read and understood) training:
 
 * All configuration items are stored and versioned in the projects' git repository.
 
-* Changes to the controlled production environment are described by the release SOP[^2].
+* Changes to the controlled production environment are described by the release SOP[^release].
 
 * Access to the controlled production environment is restricted to administrators; the system
   account used to deploy to production can only be used from the branch `main`.
   Change to these policies can only be done by a administrator.
 
+* Assets are uniquely identified by their paths in the git repository.
+
+* Assets are uniquely versioned based on the git hash.
+
 ## Software development
 
-* Software development follows the software development SOP[^3].
+* Software development follows the software development SOP[^develop].
 
 ## Validation
 
@@ -176,36 +188,36 @@ The following is mandatory (read and understood) training:
 * A test is relevant when:
     * it tests a requirement described in the function specification
     * it mitigates a risk described in the risk assessemnt
-    * a developer deems it necessary based on the software development SOP[^3].
+    * a developer deems it necessary based on the software development SOP[^develop].
 
 * Tests are specified, identified, traced and stored in the verification plan.
 
 * The verification plan
-  is specified and stored according to the DaC specification[^1].
+  is specified and stored according to the DaC specification[^dac].
 
 * The verification plan
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
+  has the same lifecycle as the application and it is versioned and released according to the release SOP[^release].
 
 * The verification plan
-  is written, reviewed and approved through the software development SOP[^3].
+  is written, reviewed and approved through the software development SOP[^develop].
 
-* Every release requires the verification plan to be executed according to the release SOP[^2].
+* Every release requires the verification plan to be executed according to the release SOP[^release].
 
 ## Release management
 
 * Releases are executed by the CI/CD (software).
 
 * The CI/CD
-  is specified in the release SOP[^2].
+  is specified in the release SOP[^release].
 
 * The CI/CD
   is stored in the same git repository as the application.
 
 * The CI/CD
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
+  has the same lifecycle as the application and it is versioned and released according to the release SOP[^release].
 
 * The CI/CD
-  is developed, reviewed and approved through the software development SOP[^3].
+  is developed, reviewed and approved through the software development SOP[^develop].
 
 * The set of merged PRs in the git repository is the set of all releases and constitutes the change log
   of the application.
@@ -215,44 +227,58 @@ The following is mandatory (read and understood) training:
 ### User manual and training
 
 * The user manual
-  is specified and stored according to the DaC specification[^1].
+  is specified and stored according to the DaC specification[^dac].
 
 * The user manual
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
+  has the same lifecycle as the application and it is versioned and released according to the release SOP[^release].
 
 * The user manual
-  is written, reviewed and approved through the software development SOP[^3].
+  is written, reviewed and approved through the software development SOP[^develop].
 
 ### Operations
 
 * The operator manual
-  is specified and stored according to the DaC specification[^1].
+  is specified and stored according to the DaC specification[^dac].
 
 * The operator manual
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
+  has the same lifecycle as the application and it is versioned and released according to the release SOP[^release].
 
 * The operator manual
-  is written, reviewed and approved through the software development SOP[^3].
+  is written, reviewed and approved through the software development SOP[^develop].
 
 * Monitoring is described in the operator manual.
 
-* Maintenance changes are no different than any other change and follow the release SOP[^2].
+* Maintenance changes are no different than any other change and follow the release SOP[^release].
+
+### Defect management
+
+* Defects are managed on the projects' repository git management system[^git].
+* Defects are reported as issues tagged by the tag "bug".
+* Defects are triaged by software developers according to their impact to the requirements.
+* Defects are prioritized according to their impact.
+* Defects are resolved throught the software development SOP[^develop].
 
 ### Retirement
 
 * The retirement plan
-  is specified and stored according to the DaC specification[^1].
+  is specified and stored according to the DaC specification[^dac].
 
 * The retirement plan
-  has the same lifecycle as the application and it is versioned and released according to the release SOP[^2].
+  has the same lifecycle as the application and it is versioned and released according to the release SOP[^release].
 
 * The retirement plan
-  is written, reviewed and approved through the software development SOP[^3].
+  is written, reviewed and approved through the software development SOP[^develop].
 
 ## References
 
-[^1]: [Quality documentation as code specification](https://github.com/medical-software-quality/documentation-as-code/tree/main/documentation/features)
+[^git]: [Github management system](https://github.com/)
 
-[^2]: [release SOP](./release_sop.md)
+[^documentation]: [the documentation management system](./documentation_management.md)
 
-[^3]: [Software development SOP](https://github.com/jorgecarleitao/quality-software-development)
+[^dac]: [Quality documentation as code specification](https://github.com/medical-software-quality/documentation-as-code/tree/main/documentation/features)
+
+[^doc_guidance]: [Documentation writing guidance](./documentation_guidance.md)
+
+[^develop]: [development SOP](./development_sop.md)
+
+[^release]: [release SOP](./release_sop.md)
