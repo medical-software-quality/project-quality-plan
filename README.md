@@ -19,6 +19,12 @@ The gist of this PQP from a modern CI/CD:
 By adopting and following this PQP, its related SOPs and the associated documentation specification,
 the software can be declared fit for use in GxP.
 
+# Status
+
+This project is in alpha version - do not use it without the supervision of a validation lead
+that knows how to present the project in an audit. If you believe that
+the procedures do not meet a quality, please raise it as a "bug" on [issues](https://github.com/medical-software-quality/project-quality-plan/issues).
+
 # How to use
 
 ## Standard
