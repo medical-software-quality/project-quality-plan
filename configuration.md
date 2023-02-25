@@ -1,7 +1,7 @@
 # GitHub
 
 Below is a configuration for Github repository and its `main` branch
-that fulfills the preconditions PC1-PC5 of [the SOP](./sop.md).
+that fulfills the preconditions PC1-PC5 of [the SOP](./release_sop.md).
 The configuration is written as a JSON usable as a patch in the
 [Github REST API](https://docs.github.com/en/rest).
 
