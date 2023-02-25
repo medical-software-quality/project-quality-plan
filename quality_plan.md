@@ -36,18 +36,20 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 * QA manager
   * ensures that this plan is followed
   * ensures that roles are trained according to the training plan
-* risk manager
+* risk manager:
   * assesses requirements' impact to risk controls
   * assesses risks' impact to risk controls
-* software developer
+* software developer:
   * develops software
   * writes tests
   * writes documentation
+* defect manager:
   * triages defects
-* user
+  * prioritizes team to address defects
+* user:
   * reports defects to the projects' ticket as part of its use
   * supports the team in establishing that defects are correctly addressed
-* qualified user
+* qualified user:
   * reports defects to the projects' ticket as part of its use
   * supports the team in establishing that defects are correctly addressed
   * supports risk managers in performing risk assessments
@@ -61,27 +63,28 @@ Documentation is managed according to the documentation management system[^docum
 
 The following is mandatory (read and understood) training:
 
-* QA manager
+* QA manager:
   * this plan
   * DaC specification[^dac]
   * release SOP[^release]
   * documentation writing guidance[^release]
-* risk manager
+* risk manager:
   * this plan
   * DaC specification[^dac]
   * release SOP[^release]
   * documentation writing guidance[^release]
-* software developer
+* software developer:
   * this plan
   * DaC specification[^dac]
   * release SOP[^release]
   * documentation writing guidance[^release]
   * Software development SOP[^develop]
-* administrator
+* defect manager: same plan as software developer
+* administrator:
   * this plan[^dac]
-* user
+* user:
   * user manual
-* qualified user
+* qualified user:
   * user manual
 
 * A change to any document results in a mandatory training for the persons in the role
@@ -222,6 +225,12 @@ The following is mandatory (read and understood) training:
 * The set of merged PRs in the git repository is the set of all releases and constitutes the change log
   of the application.
 
+## Supplier assessment
+
+* Supplier assessment is performed according to the supplier assessment SOP[^supplier_assessment_sop].
+
+* A git management system was assessed as part of this plan[^git_assessment].
+
 ## Support and maintenance
 
 ### User manual and training
@@ -253,9 +262,13 @@ The following is mandatory (read and understood) training:
 ### Defect management
 
 * Defects are managed on the projects' repository git management system[^git].
+
 * Defects are reported as issues tagged by the tag "bug".
+
 * Defects are triaged by software developers according to their impact to the requirements.
+
 * Defects are prioritized according to their impact.
+
 * Defects are resolved throught the software development SOP[^develop].
 
 ### Retirement
@@ -282,3 +295,7 @@ The following is mandatory (read and understood) training:
 [^develop]: [development SOP](./development_sop.md)
 
 [^release]: [release SOP](./release_sop.md)
+
+[^supplier_assessment_sop]: [supplier assessment SOP](./supplier_assessment/sop.md)
+
+[^git_assessment]: [release SOP](./supplier_assessment/git_management.md)
