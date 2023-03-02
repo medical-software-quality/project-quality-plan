@@ -1,14 +1,5 @@
 # Project quality plan
 
-## Background
-
-Some processes have regulatory requirements over how they are implemented and conducted
-(such as GLP and GCP, here denoted GxP).
-Software supporting such processes must follow regulations regarding how it is declared
-fit for use for such GxP processes. Such regulations include those by EMA and FDA
-and are broadly covered by [GAMP 5](https://ispe.org/publications/guidance-documents/gamp-5-guide-2nd-edition)
-This PQP is a concretization of the principles of GAMP 5 for software in a modern DevOps context.
-
 ## Abreviations
 
 * PQP - Project quality plan, this document
@@ -35,17 +26,17 @@ This PQP is intended for medical software guided by [GAMP 5](https://ispe.org/pu
 
 * QA manager
   * ensures that this plan is followed
-  * ensures that roles are trained according to the training plan
+  * ensures that roles are trained according to the training plan (see "training plan" below)
 * risk manager:
-  * assesses requirements' impact to risk controls
-  * assesses risks' impact to risk controls
+  * assesses requirements' impact to risk controls (see "requirements" below)
+  * assesses risks' impact to risk controls (see "risk assessement" below)
 * software developer:
-  * develops software
-  * writes tests
-  * writes documentation
+  * develops software (see "software development" below)
+  * writes tests (see "software development" below)
+  * writes documentation (see "software development" below)
 * defect manager:
-  * triages defects
-  * prioritizes team to address defects
+  * triages defects (see "operations" below)
+  * prioritizes team to address defects (see "operations" below)
 * user:
   * reports defects to the projects' ticket as part of its use
   * supports the team in establishing that defects are correctly addressed
@@ -298,4 +289,4 @@ The following is mandatory (read and understood) training:
 
 [^supplier_assessment_sop]: [supplier assessment SOP](./supplier_assessment/sop.md)
 
-[^git_assessment]: [release SOP](./supplier_assessment/git_management.md)
+[^git_assessment]: [git management assessment](./supplier_assessment/git_management.md)
