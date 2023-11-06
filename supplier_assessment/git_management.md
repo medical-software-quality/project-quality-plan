@@ -115,8 +115,9 @@ This section contains the supplier assessment of
 [Azure DevOps](https://azure.microsoft.com/en-us/products/devops)
 against the above requirements.
 
-This assessment was conducted on 2023-02. The overall conclusion is that although the supplier's
-product fulfills many of the requirements, it is unable to meet important requirements.
+This assessment was conducted on 2023-02 and revised on 2023-11. The overall conclusion
+is that although the supplier's product fulfills many of the requirements, it
+is unable to meet important requirements.
 
 ### Requirements
 
@@ -148,6 +149,15 @@ Code ownership is not declared as code but as a configuration of the platform. T
 in a lack of transparency over who owns which file, as well a significant burden to maintain
 code owners. During tests, this resulted in a loss of control over who
 owns specific requirements.
+
+#### Deletion of data
+
+ADO stores all changes performed to a pull request persistently and without the possibility
+to remove them. When a developer innadevertely pushes sensitive data to a repository, it is
+not possible to hard-delete it. If this data is e.g. protected by GDPR, it violates
+citizens' rights.
+
+This cannot be mitigated by deletion of the pull request, since this is also not possible ([source](https://developercommunity.visualstudio.com/t/allow-deletion-of-pull-requests/365572)). See also [here](https://stackoverflow.com/questions/61373627).
 
 ### Risks
 
